@@ -1,6 +1,5 @@
 from math import sqrt
 
-
 print("Vitaj v programe na výpočet kvadratickej rovnice.")
 
 
@@ -15,7 +14,7 @@ print("Tvoja rovnica vyzerá",a,"x2 +",b,"x + ",c," = 0")
 
 
 if d < 0:
-    print("Funkcia nemá riešenie.")
+    print("Funkcia nemá riešenie..")
 
 elif 0 < d:
     x1 = -b+sqrt(d)/2*a
