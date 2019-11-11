@@ -17,8 +17,8 @@ if d < 0:
     print("Funkcia nemá riešenie..")
 
 elif 0 < d:
-    x1 = -b+sqrt(d)/2*a
-    x2 = -b-sqrt(d)/2*a
+    x1 = (-b+sqrt(d))/2*a
+    x2 = (-b-sqrt(d))/2*a
     print("Riešenie x1 je ",x1,"a riešenie x2 je",x2,".")
 
 else:
