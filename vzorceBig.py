@@ -20,11 +20,3 @@ if odpoved1 == '1':
                 print('Trojuholnik neni pravouhly.')
         else:
             print('Neda sa narysovat.')
-    elif trojuholnikOdpoved1 == 'n':          #TODO dorobit co sa stane ked sa napise nie
-
-elif odpoved1 == '2':
-    print('Vybrali ste si rovinny utvar znamy pod nazvom stvoruholnik.')
-    stvoruholnikOdpoved1 = input(
-        'Prajete si pokracovat a prejst tak na vypocty ?     a/n     ')
-        if stvoruholnikOdpoved1 == 'a':
-            print('')
