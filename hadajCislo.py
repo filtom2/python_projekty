@@ -1,0 +1,1 @@
+#hrac musi zistit cislo ktore pocitac vygeneruje od 0 - 100 a potom hrac hlada a pocitac mu radi viac/menej
