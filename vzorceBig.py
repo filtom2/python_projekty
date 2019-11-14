@@ -9,9 +9,9 @@ if odpoved1 == '1':
     trojuholnikA = int(input('Zadajte rozmery strany a: '))
     trojuholnikB = int(input('Zadajte rozmery strany b: '))
     trojuholnikC = int(input('Zadajte rozmery strany c: '))
-    if trojuholnikA + trojuholnikB > trojuholnikC and trojuholnikB + trojuholnikC > trojuholnikA and trojuholnikC + trojuholnikA > trojuholnikB:
+    if trojuholnikA + trojuholnikB > trojuholnikC and trojuholnikB + trojuholnikC > trojuholnikA and trojuholnikC + trojuholnikA > trojuholnikB:  #zisti ci sa da vypocitat
         print('Trojuholnik sa da narysovat.')
-        if trojuholnikC ** 2 == trojuholnikB ** 2 + trojuholnikA ** 2:
+        if trojuholnikC**2 == trojuholnikB**2 + trojuholnikA**2:  #zisti ci je pravouhly
             print('Trojuholnik je pravouhly.')
         else:
             print('Trojuholnik neni pravouhly.')
@@ -20,4 +20,21 @@ if odpoved1 == '1':
 
 if odpoved1 == '2':
     print('Vybrali ste si rovinny utvar znamy pod nazvom stvoruholnik.')
-    print('Zadajte strany :')
+    print('Zadajte strany a uhly v stupnoch (0-180): ')
+    stvoruholnikA = int(input('a: '))
+    stvoruholnikB = int(input('b: '))
+    stvoruholnikC = int(input('c: '))
+    stvoruholnikD = int(input('d: '))
+    stvoruholnikAuhol = int(input('alfa: '))
+    stvoruholnikBuhol = int(input('beta: '))
+    stvoruholnikCuhol = int(input('delta: '))
+    stvoruholnikDuhol = int(input('ten stvrty uhol: '))
+
+    if stvoruholnikA == stvoruholnikB and stvoruholnikA == stvoruholnikC and stvoruholnikA == stvoruholnikD and stvoruholnikAuhol == 90 and stvoruholnikBuhol == 90 and stvoruholnikCuhol == 90 and stvoruholniDuhol == 90:  #zisti ci je to stvorec
+        print(
+            'Je to stvorec/ pretoze obe protilahle strany maju rovnaku dlzku  a uhly maju 90 stunpov'
+        )
+    elif stvoruholnikA == stvoruholnikC and stvoruholnikB == stvoruholnikD:  #zisti ci to je obdlznik
+        print('Je to obdlznik.')
+    #TODO urobit zvysne typy stvoruholnikov    
+    
