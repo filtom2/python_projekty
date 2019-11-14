@@ -2,7 +2,7 @@
 from random import randint
 n = randint(0,100)
 hadanie = int(input('Hadajte nahodne cislo od 0-100: \n'))
-while n != 'guess':
+while n != 'guess':         #TODO pridanie hori prihorieva atp.
     if hadanie > n:
         hadanie = int(input('Menej, hadaj dalej \n'))
     elif hadanie < n:
