@@ -1,4 +1,5 @@
 #Milan Seliga II.F
+from time import sleep
 print('Vitajte v programe na ratanie roznych parametroch utvarov.')
 print('1. Trojuholnik \n2. Stvoruholnik \n3. Ihlan \n4. Kvader')
 odpoved1 = input('Zvolte si utvar:')
@@ -9,11 +10,12 @@ if odpoved1 == '1':
     trojuholnikA = int(input('Zadajte rozmery strany a: '))
     trojuholnikB = int(input('Zadajte rozmery strany b: '))
     trojuholnikC = int(input('Zadajte rozmery strany c: '))
-
-                    #TODO spravit obvod trojuholnika
+    print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+    #TODO spravit obvod trojuholnika
 
     if trojuholnikA + trojuholnikB > trojuholnikC and trojuholnikB + trojuholnikC > trojuholnikA and trojuholnikC + trojuholnikA > trojuholnikB:  #zisti ci sa da vypocitat
         print('Trojuholnik sa da narysovat.')
+        print('Obvod je ',trojuholnikA+trojuholnikB+trojuholnikC,'cm.')
         if trojuholnikA == trojuholnikB and trojuholnikA == trojuholnikC and trojuholnikB == trojuholnikC:
             print('Trojuholnik je rovnostranny.')
         elif trojuholnikA != trojuholnikB and trojuholnikA != trojuholnikC and trojuholnikC != trojuholnikB:
@@ -22,13 +24,15 @@ if odpoved1 == '1':
             print('Trojuholnik je rovnoramenny')
         if trojuholnikC**2 == trojuholnikB**2 + trojuholnikA**2:  #zisti ci je pravouhly
             print('Trojuholnik je pravouhly.')
-
         else:
             print('Trojuholnik neni pravouhly.')
     else:
         print('Neda sa narysovat.')
 
+    print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+
 if odpoved1 == '2':
+    print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
     print('Vybrali ste si rovinny utvar znamy pod nazvom stvoruholnik.')
     print('Zadajte strany a uhly v stupnoch (0-180): ')
     stvoruholnikA = int(input('a: '))
@@ -39,7 +43,7 @@ if odpoved1 == '2':
     stvoruholnikBuhol = int(input('beta: '))
     stvoruholnikCuhol = int(input('delta: '))
     stvoruholnikDuhol = int(input('ten stvrty uhol: '))
-
+    print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
     if stvoruholnikA == stvoruholnikB and stvoruholnikA == stvoruholnikC and stvoruholnikA == stvoruholnikD and stvoruholnikAuhol == 90 and stvoruholnikBuhol == 90 and stvoruholnikCuhol == 90 and stvoruholnikDuhol == 90:  #zisti ci je to stvorec
         print(
             'Je to stvorec/ pretoze obe protilahle strany maju rovnaku dlzku  a uhly maju 90 stunpov'
