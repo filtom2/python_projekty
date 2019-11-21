@@ -9,13 +9,13 @@ if odpoved1 == '1':
     print('Zadajte strany :')
     trojuholnikA = int(input('Zadajte rozmery strany a: '))
     trojuholnikB = int(input('Zadajte rozmery strany b: '))
-    trojuholnikC = int(input('Zadajte rozmery strany c: '))
+    trojuholnikC = int(input('Zadajte rozmery strany c ktora je prepona: '))
     print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
     #TODO spravit obvod trojuholnika
 
     if trojuholnikA + trojuholnikB > trojuholnikC and trojuholnikB + trojuholnikC > trojuholnikA and trojuholnikC + trojuholnikA > trojuholnikB:  #zisti ci sa da vypocitat
         print('Trojuholnik sa da narysovat.')
-        print('Obvod je ',trojuholnikA+trojuholnikB+trojuholnikC,'cm.')
+        print('Obvod je ', trojuholnikA + trojuholnikB + trojuholnikC, 'cm.')
         if trojuholnikA == trojuholnikB and trojuholnikA == trojuholnikC and trojuholnikB == trojuholnikC:
             print('Trojuholnik je rovnostranny.')
         elif trojuholnikA != trojuholnikB and trojuholnikA != trojuholnikC and trojuholnikC != trojuholnikB:
@@ -39,15 +39,17 @@ if odpoved1 == '2':
     stvoruholnikB = int(input('b: '))
     stvoruholnikC = int(input('c: '))
     stvoruholnikD = int(input('d: '))
-    stvoruholnikAuhol = int(input('alfa: '))
-    stvoruholnikBuhol = int(input('beta: '))
-    stvoruholnikCuhol = int(input('delta: '))
-    stvoruholnikDuhol = int(input('ten stvrty uhol: '))
+    alfa = int(input('alfa: '))
+    beta = int(input('beta: '))
+    gamma = int(input('delta: '))
+    delta = int(input('ten stvrty uhol: '))
     print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
-    if stvoruholnikA == stvoruholnikB and stvoruholnikA == stvoruholnikC and stvoruholnikA == stvoruholnikD and stvoruholnikAuhol == 90 and stvoruholnikBuhol == 90 and stvoruholnikCuhol == 90 and stvoruholnikDuhol == 90:  #zisti ci je to stvorec
-        print(
-            'Je to stvorec/ pretoze obe protilahle strany maju rovnaku dlzku  a uhly maju 90 stunpov'
-        )
-    elif stvoruholnikA == stvoruholnikC and stvoruholnikB == stvoruholnikD:  #zisti ci to je obdlznik
+    if alfa and gamma > 90 < 180 and beta and delta < 90 and stvoruholnikA == stvoruholnikB and stvoruholnikC == stvoruholnikD and stvoruholnikA == stvoruholnikC and stvoruholnikB == stvoruholnikC and stvoruholnikD == stvoruholnikA and stvoruholnikA:
+        print('Je to kosostvorec.')
+    #TODO urobit zvysne typy stvoruholnikov najprv uhly, ci su poroti sebe potom
+    elif alfa and gamma > 90 < 180 and beta and delta < 90 and stvoruholnikA == stvoruholnikC and stvoruholnikB == stvoruholnikD:
+        print('Je to kosodlznik')
+    elif alfa and gamma and beta and delta == 90 and stvoruholnikA == stvoruholnikB and stvoruholnikC == stvoruholnikD and stvoruholnikA == stvoruholnikC and stvoruholnikB == stvoruholnikC and stvoruholnikD == stvoruholnikA and stvoruholnikA:
+        print('Je to stvorec.')
+    elif alfa and gamma and beta and delta == 90 and stvoruholnikA == stvoruholnikC and stvoruholnikB == stvoruholnikD:
         print('Je to obdlznik.')
-    #TODO urobit zvysne typy stvoruholnikov
