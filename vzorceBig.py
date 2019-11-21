@@ -5,6 +5,7 @@ print('1. Trojuholnik \n2. Stvoruholnik \n3. Ihlan \n4. Kvader')
 odpoved1 = input('Zvolte si utvar:')
 
 if odpoved1 == '1':
+    sleep(1)
     print('Vybrali ste si rovinny utvar znamy pod nazvom trojuholnik.')
     print('Zadajte strany :')
     trojuholnikA = int(input('Zadajte rozmery strany a: '))
@@ -32,9 +33,10 @@ if odpoved1 == '1':
     print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
 
 if odpoved1 == '2':
+    sleep(1)
     print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
     print('Vybrali ste si rovinny utvar znamy pod nazvom stvoruholnik.')
-    print('Zadajte strany a uhly v stupnoch (0-180): ')
+    print('Zadajte strany a uhly v stupnoch (0-180) Zadavajte postupne!: ')
     stvoruholnikA = int(input('a: '))
     stvoruholnikB = int(input('b: '))
     stvoruholnikC = int(input('c: '))
@@ -51,5 +53,9 @@ if odpoved1 == '2':
         print('Je to kosodlznik')
     elif alfa and gamma and beta and delta == 90 and stvoruholnikA == stvoruholnikB and stvoruholnikC == stvoruholnikD and stvoruholnikA == stvoruholnikC and stvoruholnikB == stvoruholnikC and stvoruholnikD == stvoruholnikA and stvoruholnikA:
         print('Je to stvorec.')
+        print(stvoruholnikA ** 2,'<-- obsah v cm2')
     elif alfa and gamma and beta and delta == 90 and stvoruholnikA == stvoruholnikC and stvoruholnikB == stvoruholnikD:
         print('Je to obdlznik.')
+        print(stvoruholnikA * stvoruholnikB,'<-- obsah v cm2')
+    elif alfa < 90 < gamma < 180 and beta < 90 < delta < 180 and alfa == beta and stvoruholnikD == stvoruholnikB and stvoruholnikA > 0 and stvoruholnikD > 0:
+        print('Je to lichobeznik.')
