@@ -25,6 +25,8 @@ if odpoved1 == '1':
             print('Trojuholnik je rovnoramenny')
         if trojuholnikC**2 == trojuholnikB**2 + trojuholnikA**2:  #zisti ci je pravouhly
             print('Trojuholnik je pravouhly.')
+            if True:
+                print('Obsah je',trojuholnikA*trojuholnikB / 2,'cm2.')
         else:
             print('Trojuholnik neni pravouhly.')
     else:
@@ -45,17 +47,24 @@ if odpoved1 == '2':
     beta = int(input('beta: '))
     gamma = int(input('delta: '))
     delta = int(input('ten stvrty uhol: '))
+    obsahstvorec = stvoruholnikA * stvoruholnikB
+    obvod = stvoruholnikB +stvoruholnikC +stvoruholnikA+stvoruholnikD
     print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
     if alfa and gamma > 90 < 180 and beta and delta < 90 and stvoruholnikA == stvoruholnikB and stvoruholnikC == stvoruholnikD and stvoruholnikA == stvoruholnikC and stvoruholnikB == stvoruholnikC and stvoruholnikD == stvoruholnikA and stvoruholnikA:
         print('Je to kosostvorec.')
+        print(obvod,'<-- obvod v cm')
     #TODO urobit zvysne typy stvoruholnikov najprv uhly, ci su poroti sebe potom
     elif alfa and gamma > 90 < 180 and beta and delta < 90 and stvoruholnikA == stvoruholnikC and stvoruholnikB == stvoruholnikD:
         print('Je to kosodlznik')
+        print(obvod,'<-- obvod v cm')
     elif alfa and gamma and beta and delta == 90 and stvoruholnikA == stvoruholnikB and stvoruholnikC == stvoruholnikD and stvoruholnikA == stvoruholnikC and stvoruholnikB == stvoruholnikC and stvoruholnikD == stvoruholnikA and stvoruholnikA:
         print('Je to stvorec.')
-        print(stvoruholnikA ** 2,'<-- obsah v cm2')
+        print(obvod,'<-- obvod v cm')
+        print(obsahstvorec,'<-- obsah v cm2')
     elif alfa and gamma and beta and delta == 90 and stvoruholnikA == stvoruholnikC and stvoruholnikB == stvoruholnikD:
         print('Je to obdlznik.')
-        print(stvoruholnikA * stvoruholnikB,'<-- obsah v cm2')
+        print(obsah,'<-- obsah v cm2')
+        print(obvod,'<-- obvod v cm')
     elif alfa < 90 < gamma < 180 and beta < 90 < delta < 180 and alfa == beta and stvoruholnikD == stvoruholnikB and stvoruholnikA > 0 and stvoruholnikD > 0:
         print('Je to lichobeznik.')
+        print(obvod,'<-- obvod v cm')
