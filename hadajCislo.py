@@ -7,6 +7,6 @@ while n != 'guess':         #TODO pridanie hori prihorieva atp.
         hadanie = int(input('Menej, hadaj dalej \n'))
     elif hadanie < n:
         hadanie = int(input('Viacej, hadaj dalej \n'))
-    else:
+    elif hadanie == n:
         print('Uhadol si cislo.')
         break
