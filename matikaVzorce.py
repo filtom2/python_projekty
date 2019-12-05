@@ -7,6 +7,7 @@ print('')
 print('Pre výber trojuholníka stlačte 1')
 print('Pre výber štvoruholníka stlačte 2')
 print('Pre výber ihlana stlačte 3')
+print('Pre výber kvadra/kocky stlačte 4')
 
 print()
 
@@ -95,3 +96,12 @@ elif w == 3:
         'Povrch Vášho ihlana je: ',
         a * b + (a * (math.sqrt(v1 * v1 + (b * b) / 2))) +
         (b * math.sqrt(v1 * v1 + (b * b) / 2)), 'cm2')
+
+elif w == 4:
+    print('Vybrali ste si kocku/ihlan')
+    a = float(input('Zadajte dľžku strany a v cm: '))
+    b = float(input('Zadajte dľžku strany b v cm: '))
+    c = float(input('Zadajte dľžku strany c v cm: '))
+    d = float(input('Zadajte dľžku strany d v cm: '))
+
+    
