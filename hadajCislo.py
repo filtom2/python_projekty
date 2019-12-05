@@ -9,4 +9,4 @@ while n != 'guess':         #TODO pridanie hori prihorieva atp.   #program je v 
         hadanie = int(input('Viacej, hadaj dalej \n'))
     elif hadanie == n:
         print('Uhadol si cislo.')
-        break              #Ukonci while cyklus
+        break                            #Ukonci while cyklus
