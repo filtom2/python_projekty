@@ -1,9 +1,8 @@
-#Milan Seliga II.F 
+#Milan Seliga II.F
 #vypocet faktorialu
 n = int(input('Vlozte cislo: '))
 fakt = 1
-for i in range(n,0,-1):
+for i in range(n, 0, -1):
     fakt = fakt * i
     print(fakt)
-print('Vas vysledok je,',fakt)
-    
+print('Vas vysledok je,', fakt)
