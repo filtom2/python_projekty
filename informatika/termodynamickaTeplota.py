@@ -7,5 +7,7 @@ kroky = int(input('Zadajte po kolko chcete zvacsovat: '))
 
 print('Stupne Celzia:           Kelviny: ')
 print('       ----------------------------')
+
 for i in range(vstup - 1, koniec + 1, kroky):
-    print('{:11} {:20}'.format(i,i + 273))
+    print('{:11} {:20}'.format(i, i + 273))
+
