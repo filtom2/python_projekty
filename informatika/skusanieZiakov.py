@@ -5,9 +5,6 @@ from random import *
 import time
 #/////////////////////#
 
-
-
-
 start = True
 while start == True:
     start_time = time.time()
@@ -15,7 +12,8 @@ while start == True:
 
     print('Vitajte v programe.')
     print()
-    print('Zvolte si operaciu: \n 1.Scitanie\n 2.Odcit1anie\n 3.Nasobenie\n 4.Delenie\n')
+    print(
+        'Zvolte si operaciu: \n 1.Scitanie\n 2.Odcit1anie\n 3.Nasobenie\n 4.Delenie\n')
     print('==================')
 
     operacia = int(input('Vyber si cislom operaciu: '))
@@ -34,7 +32,8 @@ while start == True:
               spravne / pocetPrikladovNemenne * 100, '%\n')
         print('Z', pocetPrikladovNemenne, 'ste mali dobre:', spravne,
               'priklady a zle:', zle, 'priklad/dov.\n')
-        print('Trvalo vam to,',round(time.time()- start_time,1),'sekund.\n')
+        print('Trvalo vam to,', round(time.time() - start_time, 1),
+              'sekund.\n')
         time.sleep(0.1)
         print('  ==============')
         time.sleep(0.1)
@@ -44,7 +43,7 @@ while start == True:
 
     if operacia == 1:
         print('Vybrali ste si scitanie.')
-    
+
         spravne = 0
         zle = 0
         pocet = 0
@@ -187,14 +186,16 @@ while start == True:
                 b = randint(1, 10)
 
             pocetPrikladov -= 1
+
             print(a, '/', b)
             vysledok = int(input('= '))
+
             if a > b:
                 if vysledok == a / b:
                     spravne += 1
                     pocet += 1
                     continue
-                else: 
+                else:
                     while a / b != vysledok:
                         print('Zle skus este raz: \n')
                         print(a, '/', b)
