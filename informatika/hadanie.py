@@ -1,8 +1,9 @@
 from random import *
 from time import sleep
-doKolko = int(input('Do kolko chcete hrat ?: '))
+
 koniec = 'a'
 while koniec != 'n' and koniec != 'N':
+    doKolko = int(input('Do kolko chcete hrat ?: '))
     n = randint(0,doKolko)
     guess = int(input('Hadaj cislo: '))
     pokusy = 1
