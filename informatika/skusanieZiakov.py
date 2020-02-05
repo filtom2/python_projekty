@@ -28,8 +28,7 @@ while start == True:
         print(' ================')
         time.sleep(0.1)
         print('  ===============')
-        print('\n   ', spravne, '/', pocetPrikladovNemenne, '\n   ',
-              spravne / pocetPrikladovNemenne * 100, '%\n')
+        print('\n   ', spravne, '/', pocetPrikladovNemenne, '\n   ',round(spravne / pocetPrikladovNemenne * 100,2), '%\n')
         print('Z', pocetPrikladovNemenne, 'ste mali dobre:', spravne,
               'priklady a zle:', zle, 'priklad/dov.\n')
         print('Trvalo vam to,', round(time.time() - start_time, 1),
@@ -72,8 +71,8 @@ while start == True:
 
     elif operacia == 2:
         print('Vybrali ste si odcitanie.')
-        odcitanieAjZaporne = input('Prajete si aj zaporne cisla ? a/n  ')
-        if odcitanieAjZaporne == 'a':
+        odcitanieAjZaporne = input('Prajete si aj zaporne cisla ? 1/0  ')
+        if odcitanieAjZaporne == '1':
 
             spravne = 0
             zle = 0
@@ -100,7 +99,7 @@ while start == True:
                     continue
             koniecInfo()
 
-        elif odcitanieAjZaporne == 'n':
+        elif odcitanieAjZaporne == '0':
 
             spravne = 0
             zle = 0
@@ -207,10 +206,19 @@ while start == True:
                 continue
         koniecInfo()
 
-    esteRaz = input('Chces hrat znova ?: a/n ')
-    if esteRaz == 'a' or esteRaz == 'A':
+    esteRaz = input('Chces hrat znova ?: 1/0 ')
+    if esteRaz == '1':
         continue
-    elif esteRaz == 'n' or esteRaz == 'N':
+    elif esteRaz == '0':
         print('\nDobre zbohom...')
         time.sleep(0.2)
         break
+    else:
+        print('Skus este raz..')
+        esteRaz = input('Chces hrat znova ?: 1/0 ')
+        if esteRaz == '1':
+            continue
+        elif esteRaz == '0':    
+            print('\nDobre zbohom...')
+            time.sleep(0.2)
+            break
