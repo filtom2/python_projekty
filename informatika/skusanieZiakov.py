@@ -13,17 +13,19 @@ while start == True:
     print('Vitajte v programe.')
     print()
     print(
-        'Zvolte si operaciu: \n 1.Scitanie\n 2.Odcit1anie\n 3.Nasobenie\n 4.Delenie\n')
+        'Zvolte si operaciu: \n 1.Scitanie\n 2.Odcit1anie\n 3.Nasobenie\n 4.Delenie\n'
+    )
     print('==================')
 
     operacia = int(input('Vyber si cislom operaciu: '))
     pocetPrikladov = int(input('Kolko prikladov chcete ?: '))
     pocetPrikladovNemenne = pocetPrikladov
 
-    obtiaznost = int(input('Vyberte si obtiaznost: \n 1)easy\n 2)medium\n 3)hard'))
+    obtiaznost = int(
+        input('Vyberte si obtiaznost: \n 1)easy\n 2)medium\n 3)hard'))
 
     if obtiaznost == 1:
-        narocnost =10
+        narocnost = 10
 
     if obtiaznost == 2:
         narocnost = 100
@@ -31,9 +33,6 @@ while start == True:
     if obtiaznost == 3:
         narocnost = 1000
 
-
-
-    
     def koniecInfo():
 
         time.sleep(0.3)
@@ -42,7 +41,8 @@ while start == True:
         print(' ================')
         time.sleep(0.1)
         print('  ===============')
-        print('\n   ', spravne, '/', pocetPrikladovNemenne, '\n   ',round(spravne / pocetPrikladovNemenne * 100,2), '%\n')
+        print('\n   ', spravne, '/', pocetPrikladovNemenne, '\n   ',
+              round(spravne / pocetPrikladovNemenne * 100, 2), '%\n')
         print('Z', pocetPrikladovNemenne, 'ste mali dobre:', spravne,
               'priklady a zle:', zle, 'priklad/dov.\n')
         print('Trvalo vam to,', round(time.time() - start_time, 1),
@@ -64,7 +64,7 @@ while start == True:
         while pocetPrikladov != 0:
             a = randint(0, narocnost)
             b = randint(0, narocnost)
-            
+
             while a + b > narocnost:
                 b = randint(0, narocnost)
 
@@ -236,7 +236,7 @@ while start == True:
         esteRaz = input('Chces hrat znova ?: 1/0 ')
         if esteRaz == '1':
             continue
-        elif esteRaz == '0':    
+        elif esteRaz == '0':
             print('\nDobre zbohom...')
             time.sleep(0.2)
             break
