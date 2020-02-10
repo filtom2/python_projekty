@@ -20,6 +20,20 @@ while start == True:
     pocetPrikladov = int(input('Kolko prikladov chcete ?: '))
     pocetPrikladovNemenne = pocetPrikladov
 
+    obtiaznost = int(input('Vyberte si obtiaznost: \n 1)easy\n 2)medium\n 3)hard'))
+
+    if obtiaznost == 1:
+        narocnost =10
+
+    if obtiaznost == 2:
+        narocnost = 100
+
+    if obtiaznost == 3:
+        narocnost = 1000
+
+
+
+    
     def koniecInfo():
 
         time.sleep(0.3)
@@ -48,8 +62,12 @@ while start == True:
         pocet = 0
 
         while pocetPrikladov != 0:
-            a = randint(0, 10)
-            b = randint(0, 10)
+            a = randint(0, narocnost)
+            b = randint(0, narocnost)
+            
+            while a + b > narocnost:
+                b = randint(0, narocnost)
+
             pocetPrikladov -= 1
             print(a, '+', b)
             vysledok = int(input('= '))
@@ -79,8 +97,8 @@ while start == True:
             pocet = 0
 
             while pocetPrikladov != 0:
-                a = randint(0, 10)
-                b = randint(0, 10)
+                a = randint(0, narocnost)
+                b = randint(0, narocnost)
                 pocetPrikladov -= 1
                 print(a, '-', b)
                 vysledok = int(input('= '))
@@ -106,8 +124,8 @@ while start == True:
             pocet = 0
 
             while pocetPrikladov != 0:
-                a = randint(0, 10)
-                b = randint(0, 10)
+                a = randint(0, narocnost)
+                b = randint(0, narocnost)
                 while not a > b:
                     b = randint(0, 10)
 
@@ -138,8 +156,8 @@ while start == True:
         pocet = 0
 
         while pocetPrikladov != 0:
-            a = randint(0, 10)
-            b = randint(0, 10)
+            a = randint(0, narocnost)
+            b = randint(0, narocnost)
             pocetPrikladov -= 1
             print(a, '*', b)
             vysledok = int(input('= '))
@@ -179,8 +197,8 @@ while start == True:
         pocet = 0
 
         while pocetPrikladov != 0:
-            a = randint(0, 20)
-            b = randint(1, 20)
+            a = randint(0, narocnost)
+            b = randint(1, narocnost)
             while not a % b == 0:
                 b = randint(1, 10)
 
